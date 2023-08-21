@@ -1,7 +1,7 @@
 package com.example.forall.Repo
 
-import com.example.forall.network.products
+import com.example.forall.Database.products
 
 interface productsRepo {
-    suspend fun getProductsFromApi():products
+    suspend fun getProductsFromApi(): products
 }

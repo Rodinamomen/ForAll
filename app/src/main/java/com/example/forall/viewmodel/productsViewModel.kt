@@ -4,8 +4,7 @@ import androidx.lifecycle.LiveData
 import androidx.lifecycle.MutableLiveData
 import androidx.lifecycle.ViewModel
 import com.example.forall.Repo.productsRepo
-import com.example.forall.network.Product
-import com.example.forall.network.products
+import com.example.forall.Database.Product
 import androidx.lifecycle.viewModelScope
 import kotlinx.coroutines.launch
 

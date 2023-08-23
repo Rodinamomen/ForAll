@@ -3,7 +3,7 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".Authentication.SignUpFragment">
+    tools:context=".Authentication.Signup.view.SignUpFragment">
 
     <androidx.constraintlayout.widget.ConstraintLayout
         android:layout_width="match_parent"
@@ -40,11 +40,11 @@
 
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/email_textInput_login"
+            android:id="@+id/signupemail_textInput_login"
             android:layout_width="0dp"
             android:layout_height="61dp"
             android:layout_marginTop="60dp"
-            app:layout_constraintBottom_toTopOf="@+id/password_textinput_login"
+            app:layout_constraintBottom_toTopOf="@+id/signuppassword_textinput"
             app:layout_constraintEnd_toEndOf="@+id/lottie"
             app:layout_constraintStart_toStartOf="@+id/lottie"
             app:layout_constraintTop_toBottomOf="@+id/lottie">
@@ -56,14 +56,14 @@
         </com.google.android.material.textfield.TextInputLayout>
 
         <com.google.android.material.textfield.TextInputLayout
-            android:id="@+id/password_textinput_login"
+            android:id="@+id/signuppassword_textinput"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="30dp"
-            app:layout_constraintEnd_toEndOf="@+id/email_textInput_login"
+            app:layout_constraintEnd_toEndOf="@+id/signupemail_textInput_login"
             app:layout_constraintHorizontal_bias="0.5"
-            app:layout_constraintStart_toStartOf="@+id/email_textInput_login"
-            app:layout_constraintTop_toBottomOf="@+id/email_textInput_login">
+            app:layout_constraintStart_toStartOf="@+id/signupemail_textInput_login"
+            app:layout_constraintTop_toBottomOf="@+id/signupemail_textInput_login">
 
             <com.google.android.material.textfield.TextInputEditText
                 android:layout_width="match_parent"
@@ -78,7 +78,7 @@
             android:layout_marginTop="30dp"
             android:text="Do Not Have An Account?"
             app:layout_constraintEnd_toStartOf="@+id/signup_arrow"
-            app:layout_constraintTop_toBottomOf="@+id/password_textinput_login" />
+            app:layout_constraintTop_toBottomOf="@+id/signuppassword_textinput" />
 
         <ImageView
             android:id="@+id/signup_arrow"
@@ -88,18 +88,18 @@
             android:layout_marginEnd="16dp"
             android:src="@drawable/baseline_arrow_forward_24"
             app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintTop_toBottomOf="@+id/password_textinput_login" />
+            app:layout_constraintTop_toBottomOf="@+id/signuppassword_textinput" />
 
         <Button
-            android:id="@+id/login_btn"
+            android:id="@+id/signup_btn"
             android:layout_width="0dp"
             android:layout_height="wrap_content"
             android:layout_marginTop="40dp"
             android:backgroundTint="@color/primary"
             android:text="Log in "
             android:textSize="20sp"
-            app:layout_constraintEnd_toEndOf="@+id/password_textinput_login"
-            app:layout_constraintStart_toStartOf="@+id/password_textinput_login"
+            app:layout_constraintEnd_toEndOf="@+id/signuppassword_textinput"
+            app:layout_constraintStart_toStartOf="@+id/signuppassword_textinput"
             app:layout_constraintTop_toBottomOf="@+id/login_textview" />
     </androidx.constraintlayout.widget.ConstraintLayout>
 </FrameLayout>

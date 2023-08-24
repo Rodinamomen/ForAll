@@ -22,13 +22,12 @@ import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputLayout
 
 class SignUpFragment : Fragment() {
-    lateinit var loginTxt: ImageView
+    lateinit var login_arrow: ImageView
     lateinit var userName: TextInputLayout
     lateinit var email:TextInputLayout
     lateinit var password:TextInputLayout
     lateinit var SignupViewModel: signupViewModel
     lateinit var signup_btn: Button
-  //  lateinit var signupViewModelFactory: signupViewModelFactory
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
@@ -38,17 +37,18 @@ class SignUpFragment : Fragment() {
     }
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        loginTxt = requireActivity().findViewById(R.id.signup_arrow)
-        userName=requireActivity().findViewById(R.id.signupusername_TextInput)
-        email=requireActivity().findViewById(R.id.signupemail_textInput_login)
-        password=requireActivity().findViewById(R.id.signuppassword_textinput)
-        signup_btn=requireActivity().findViewById(R.id.signup_btn)
+        login_arrow = view.findViewById(R.id.login_arrow)
+        userName=view.findViewById(R.id.signupusername_TextInput)
+        email=view.findViewById(R.id.loginemail_textInput_login)
+        password=view.findViewById(R.id.loginpassword_textinput)
+        signup_btn=view.findViewById(R.id.login)
         gettingViewModelReady(requireContext())
-        loginTxt.setOnClickListener {
+        login_arrow.setOnClickListener {
             findNavController().navigate(R.id.action_signUpFragment_to_loginFragment)
         }
         SignupViewModel.ifUserWithEmailExists.observe(requireActivity()){ data->
             Log.d("dataaaaa", "onViewCreated: ${false}")
+            if(data != null){
             if(data){
                 MaterialAlertDialogBuilder(requireContext()).setTitle("The Account Is Signed In").setMessage("That email address is associated with a user account.").setPositiveButton("Ok", null)
                     .show()
@@ -56,7 +56,7 @@ class SignUpFragment : Fragment() {
                 validateUserData(
                     userName.editText?.text.toString(),password.editText?.text.toString(),email.editText?.text.toString())
             }
-        }
+        }}
         signup_btn.setOnClickListener {
             SignupViewModel.ifUserWithEmailExists(email.editText?.text.toString())
         }
@@ -81,6 +81,7 @@ class SignUpFragment : Fragment() {
         }
     }
     fun validateUserName(userName:String):Boolean{
+
         val userNameRegex ="^[A-Za-z]{3,30}\$".toRegex()
         return userName.matches( userNameRegex)
     }

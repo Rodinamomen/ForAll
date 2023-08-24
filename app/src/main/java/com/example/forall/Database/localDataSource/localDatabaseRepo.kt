@@ -12,4 +12,6 @@ interface localDatabaseRepo {
     suspend fun deleteUser(user: User)
     suspend fun getUserById(userId:Int):User
     suspend fun ifUserWithEmailExists(email:String):Boolean
+    suspend fun ifEmailMatchesPassword(email: String , password :String):Boolean
+
 }

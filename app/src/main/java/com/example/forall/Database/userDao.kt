@@ -17,4 +17,7 @@ interface userDao {
 
     @Query("SELECT EXISTS( SELECT * FROM user WHERE email = :email) ")
     suspend fun ifUserWithEmailExists(email:String):Boolean
+
+    @Query("SELECT EXISTS(SELECT * FROM user WHERE email= :email AND password= :password)")
+    suspend fun ifEmailMatchesPassword(email: String , password :String):Boolean
 }

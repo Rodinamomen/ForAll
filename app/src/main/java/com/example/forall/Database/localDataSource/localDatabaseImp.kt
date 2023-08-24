@@ -19,11 +19,9 @@ class localDatabaseImp(context: Context):localDatabaseRepo {
         productDao=db.productDao()
         cartDao=db.userWithCartDao()
         favouritesDao= db.userWithFavourites()
-
     }
     override suspend fun addUser(user: User) {
         userDao.addUser(user)
-
     }
 
     override suspend fun deleteUser(user: User) {
@@ -36,5 +34,8 @@ class localDatabaseImp(context: Context):localDatabaseRepo {
 
     override suspend fun ifUserWithEmailExists(email: String): Boolean {
         return userDao.ifUserWithEmailExists(email)
+    }
+    override suspend fun ifEmailMatchesPassword(email: String, password: String): Boolean {
+        return userDao.ifEmailMatchesPassword(email, password)
     }
 }

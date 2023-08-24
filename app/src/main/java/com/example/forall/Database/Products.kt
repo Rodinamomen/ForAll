@@ -1,4 +1,6 @@
-package com.example.forall.network
+package com.example.forall.Database
+
+import com.example.forall.Database.Product
 
 data class products(
     val limit: Int,

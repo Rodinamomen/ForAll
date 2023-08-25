@@ -21,7 +21,7 @@
             app:layout_constraintStart_toStartOf="parent"
             app:layout_constraintTop_toBottomOf="@+id/textView"
             app:lottie_autoPlay="true"
-            app:lottie_rawRes="@raw/signup" />
+            app:lottie_rawRes="@raw/login" />
 
         <TextView
             android:id="@+id/textView"
@@ -43,7 +43,7 @@
             android:id="@+id/loginemail_textInput_login"
             android:layout_width="0dp"
             android:layout_height="61dp"
-            android:layout_marginTop="60dp"
+            android:layout_marginTop="20dp"
             app:layout_constraintBottom_toTopOf="@+id/loginpassword_textinput"
             app:layout_constraintEnd_toEndOf="@+id/lottie"
             app:layout_constraintStart_toStartOf="@+id/lottie"

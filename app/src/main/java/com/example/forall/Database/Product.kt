@@ -7,12 +7,12 @@ import androidx.room.TypeConverter
 @Entity("product")
 data class Product(
    @PrimaryKey(autoGenerate = true) val productId :Int=0 ,
-    val brand: String="",
-    val category: String="",
-    val description: String="",
+    val brand: String,
+    val category: String,
+    val description: String,
     val discountPercentage: Double,
     val id: Int,
-  //   val images: List<String>,
+    val images: ArrayList<String>,
     val price: Int,
     val rating: Double,
     val stock: Int,

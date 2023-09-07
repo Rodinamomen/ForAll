@@ -32,6 +32,7 @@ class HomeActivty : AppCompatActivity(), NavigationView.OnNavigationItemSelected
         toggle.syncState()
         navigationView.setNavigationItemSelectedListener(this)
         navigationView.setItemIconSize(150)
+
         navigationView.itemIconTintList=null
     }
 

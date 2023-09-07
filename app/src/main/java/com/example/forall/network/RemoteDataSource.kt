@@ -1,5 +1,6 @@
 package com.example.forall.network
 
+import com.example.forall.Database.Product
 import com.example.forall.Database.products
 
 interface RemoteDataSource {

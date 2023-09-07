@@ -1,6 +1,7 @@
 package com.example.forall.Database.localDataSource
 
 import android.content.Context
+import com.example.forall.Database.Product
 import com.example.forall.Database.User
 import com.example.forall.Database.productDao
 import com.example.forall.Database.userDao
@@ -38,4 +39,9 @@ class localDatabaseImp(context: Context):localDatabaseRepo {
     override suspend fun ifEmailMatchesPassword(email: String, password: String): Boolean {
         return userDao.ifEmailMatchesPassword(email, password)
     }
+
+    override suspend fun getproductslist(): List<Product> {
+        return productDao.getproductslist()
+    }
+
 }

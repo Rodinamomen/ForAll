@@ -4,7 +4,10 @@ import android.content.Context
 import androidx.room.Database
 import androidx.room.Room
 import androidx.room.RoomDatabase
+import androidx.room.TypeConverter
+import androidx.room.TypeConverters
 import com.example.forall.Database.Cart
+import com.example.forall.Database.Converter
 import com.example.forall.Database.Product
 import com.example.forall.Database.User
 import com.example.forall.Database.favourites
@@ -14,7 +17,8 @@ import com.example.forall.Database.userWithCartDao
 import com.example.forall.Database.userWithFavourites
 import com.example.forall.Database.userWithFavouritesDao
 
-@Database(entities = [User::class,Product::class,Cart::class,favourites::class], version = 8)
+@Database(entities = [User::class,Product::class,Cart::class,favourites::class] , version =9 )
+@TypeConverters(Converter::class)
     abstract class DataBase : RoomDatabase() {
         abstract fun productDao(): productDao
         abstract fun userWithCartDao(): userWithCartDao

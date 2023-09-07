@@ -45,7 +45,7 @@ class LoginFragment : Fragment() {
         gettingViewModelReady(requireContext())
         LoginViewModel.emailMatchesPassword.observe(requireActivity()) { emailMatchesPassword ->
             if (emailMatchesPassword) {
-                findNavController().navigate(R.id.action_loginFragment_to_homeFragment)
+                // TODO:     findNavController().navigate(R.id.)
             } else {
                 LoginViewModel.emailExists.observe(requireActivity()) { emailExists ->
                     if (emailExists) {

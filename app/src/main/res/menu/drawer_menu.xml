@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/technolody_icon"
+        android:icon="@drawable/lamp"
+        android:title="Technology"
+        android:visible="true" />
+    <item
+        android:icon="@drawable/manclothes"
+        android:title="Men Clothes" />
+    <item
+        android:icon="@drawable/womanclothes"
+        android:title="Women Clothes" />
+    <item
+        android:icon="@drawable/armchair"
+        android:title="Furniture" />
+    <item
+        android:icon="@drawable/skincare"
+        android:title="Skin Care " />
+</menu>

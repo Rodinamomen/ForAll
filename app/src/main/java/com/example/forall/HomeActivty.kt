@@ -21,9 +21,7 @@ class HomeActivty : AppCompatActivity(), NavigationView.OnNavigationItemSelected
         setSupportActionBar(toolbar)
         supportActionBar?.title=""
         instantiondrawer()
-
     }
-    @SuppressLint("ResourceType")
     private fun instantiondrawer() {
         drawerLayout=findViewById(R.id.drawer)
         navigationView= findViewById(R.id.navigationview)

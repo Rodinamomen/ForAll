@@ -43,6 +43,7 @@ lateinit var viewmodel : homeViewModel
 lateinit var bottomNavigationView: BottomNavigationView
 
 
+
 class homeFragment : Fragment() , NavigationView.OnNavigationItemSelectedListener {
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

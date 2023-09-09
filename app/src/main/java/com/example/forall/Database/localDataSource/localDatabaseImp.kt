@@ -40,8 +40,6 @@ class localDatabaseImp(context: Context):localDatabaseRepo {
         return userDao.ifEmailMatchesPassword(email, password)
     }
 
-    override suspend fun getproductslist(): List<Product> {
-        return productDao.getproductslist()
-    }
+
 
 }

@@ -18,4 +18,5 @@ class Converter{
         val gson = Gson()
         return gson.toJson(list)
     }
+
 }

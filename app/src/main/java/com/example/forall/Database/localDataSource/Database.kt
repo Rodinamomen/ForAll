@@ -12,18 +12,21 @@ import com.example.forall.Database.Product
 import com.example.forall.Database.User
 import com.example.forall.Database.favourites
 import com.example.forall.Database.productDao
+import com.example.forall.Database.products
+
 import com.example.forall.Database.userDao
 import com.example.forall.Database.userWithCartDao
 import com.example.forall.Database.userWithFavourites
 import com.example.forall.Database.userWithFavouritesDao
 
-@Database(entities = [User::class,Product::class,Cart::class,favourites::class] , version =9 )
+@Database(entities = [User::class,Product::class,Cart::class,favourites::class] , version =3)
 @TypeConverters(Converter::class)
     abstract class DataBase : RoomDatabase() {
         abstract fun productDao(): productDao
         abstract fun userWithCartDao(): userWithCartDao
         abstract fun userWithFavourites(): userWithFavouritesDao
         abstract fun userDao(): userDao
+
         companion object{
             @Volatile
             private var INSTANCE:DataBase?= null

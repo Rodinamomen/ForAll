@@ -1,10 +1,12 @@
 package com.example.forall.Database
 
-import com.example.forall.Database.Product
+import androidx.room.Entity
 
+import com.example.forall.Database.Product
 data class products(
+
     val limit: Int,
-    val products: List<Product>,
+    val products: ArrayList<Product>,
     val skip: Int,
     val total: Int
 )

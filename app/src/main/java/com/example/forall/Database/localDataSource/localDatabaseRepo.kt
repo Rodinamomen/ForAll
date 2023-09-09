@@ -14,6 +14,5 @@ interface localDatabaseRepo {
     suspend fun getUserById(userId:Int):User
     suspend fun ifUserWithEmailExists(email:String):Boolean
     suspend fun ifEmailMatchesPassword(email: String , password :String):Boolean
-    suspend fun getproductslist(): List<Product>
 
 }

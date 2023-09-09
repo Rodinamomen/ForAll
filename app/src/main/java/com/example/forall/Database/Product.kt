@@ -12,7 +12,7 @@ data class Product(
     val description: String,
     val discountPercentage: Double,
     val id: Int,
-    val images: ArrayList<String>,
+    val images:  ArrayList<String>,
     val price: Int,
     val rating: Double,
     val stock: Int,
